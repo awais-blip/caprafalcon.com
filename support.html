@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support — Capra Falcon Inc</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --black: #0a0a0a; --white: #ffffff; --cream: #f8f6f1; --gold: #c9a84c; --dark: #1a1a1a; --mid: #444; --light: #888; --border: #e5e5e5; }
+  body { font-family: 'Inter', sans-serif; color: var(--black); background: var(--white); }
+  nav { position: sticky; top: 0; z-index: 1000; display: flex; align-items: center; justify-content: space-between; padding: 0 5%; height: 72px; background: rgba(10,10,10,0.97); border-bottom: 1px solid rgba(201,168,76,0.2); }
+  .nav-logo { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 900; color: var(--white); text-decoration: none; }
+  .nav-logo span { color: var(--gold); }
+  .nav-back { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 13px; letter-spacing: 1px; transition: color 0.2s; }
+  .nav-back:hover { color: var(--gold); }
+  .page-hero { background: var(--black); padding: 80px 5% 60px; }
+  .page-hero h1 { font-family: 'Playfair Display', serif; font-size: 52px; font-weight: 900; color: var(--white); }
+  .page-hero p { color: rgba(255,255,255,0.5); margin-top: 12px; font-size: 15px; }
+  .content { max-width: 900px; margin: 0 auto; padding: 80px 5%; }
+  .support-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-bottom: 60px; }
+  .support-card { background: var(--cream); border-radius: 4px; padding: 36px 32px; border: 1px solid var(--border); }
+  .support-icon { font-size: 32px; margin-bottom: 16px; }
+  .support-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; margin-bottom: 10px; }
+  .support-desc { font-size: 14px; color: var(--light); line-height: 1.6; margin-bottom: 20px; }
+  .support-link { display: inline-block; background: var(--black); color: var(--white); padding: 10px 24px; border-radius: 2px; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
+  .support-link:hover { background: var(--gold); color: var(--black); }
+  h2 { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 900; margin-bottom: 32px; }
+  .faq-item { border-bottom: 1px solid var(--border); padding: 24px 0; }
+  .faq-q { font-size: 16px; font-weight: 700; margin-bottom: 10px; }
+  .faq-a { font-size: 14px; color: var(--mid); line-height: 1.7; }
+  footer { background: var(--black); padding: 40px 5%; text-align: center; }
+  .footer-copy { font-size: 13px; color: rgba(255,255,255,0.3); }
+  .footer-logo { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 900; color: var(--white); margin-bottom: 12px; }
+  .footer-logo span { color: var(--gold); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Capra <span>Falcon</span></a>
+  <a href="/" class="nav-back">← Back to Home</a>
+</nav>
+
+<div class="page-hero">
+  <h1>Support Center</h1>
+  <p>We are here to help. Find answers or get in touch with our team.</p>
+</div>
+
+<div class="content">
+  <div class="support-grid">
+    <div class="support-card">
+      <div class="support-icon">📦</div>
+      <div class="support-title">Order Support</div>
+      <div class="support-desc">Questions about your Amazon order, delivery, or returns? We resolve all issues quickly.</div>
+      <a href="mailto:support@caprafalcon.com?subject=Order Support" class="support-link">Email Support</a>
+    </div>
+    <div class="support-card">
+      <div class="support-icon">🔄</div>
+      <div class="support-title">Returns and Refunds</div>
+      <div class="support-desc">Not satisfied with your purchase? Our satisfaction guarantee means we will make it right.</div>
+      <a href="mailto:support@caprafalcon.com?subject=Return Request" class="support-link">Request Return</a>
+    </div>
+    <div class="support-card">
+      <div class="support-icon">❓</div>
+      <div class="support-title">Product Questions</div>
+      <div class="support-desc">Have a question about sizing, materials, or product specifications before purchasing?</div>
+      <a href="mailto:support@caprafalcon.com?subject=Product Question" class="support-link">Ask a Question</a>
+    </div>
+  </div>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">Where are your products sold?</div>
+    <div class="faq-a">All Capra Falcon products are sold exclusively on Amazon.com in the United States. We are an authorized Amazon seller under the HAVENORA brand.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">What is your return policy?</div>
+    <div class="faq-a">All products are covered by Amazon's standard return policy. If you are not satisfied with your purchase for any reason, contact us at support@caprafalcon.com and we will resolve the issue promptly.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">How do I check the status of my order?</div>
+    <div class="faq-a">Order status can be checked directly in your Amazon account under "Your Orders". If you experience any issues, contact us and we will assist you.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Do you offer wholesale or bulk pricing?</div>
+    <div class="faq-a">For wholesale or bulk inquiries, please email us at support@caprafalcon.com with your requirements and we will respond within 2 business days.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">How can I contact your support team?</div>
+    <div class="faq-a">Email us at support@caprafalcon.com. We respond to all inquiries within 1-2 business days, Monday through Friday.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Are your products covered by a satisfaction guarantee?</div>
+    <div class="faq-a">Yes. Every Capra Falcon product carries our satisfaction guarantee. If a product does not meet your expectations, we will replace it or issue a full refund.</div>
+  </div>
+
+  <div style="margin-top: 60px; background: var(--black); padding: 48px; border-radius: 4px; text-align: center;">
+    <h3 style="font-family: 'Playfair Display', serif; font-size: 28px; color: var(--white); margin-bottom: 12px;">Still need help?</h3>
+    <p style="color: rgba(255,255,255,0.5); margin-bottom: 28px; font-size: 15px;">Our support team responds within 1-2 business days.</p>
+    <a href="mailto:support@caprafalcon.com" style="display: inline-block; background: var(--gold); color: var(--black); padding: 14px 36px; border-radius: 2px; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; text-decoration: none;">Email Us Now</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">Capra <span>Falcon</span></div>
+  <div class="footer-copy">© 2026 Capra Falcon Inc. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

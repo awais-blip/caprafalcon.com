@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capra Falcon Inc — Premium Private Label Brands</title>
+<meta name="description" content="Capra Falcon Inc is a US-based Amazon private label company delivering premium quality products across apparel, accessories, and lifestyle categories.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --black: #0a0a0a;
+    --white: #ffffff;
+    --cream: #f8f6f1;
+    --gold: #c9a84c;
+    --gold-light: #e8d49e;
+    --dark: #1a1a1a;
+    --mid: #444;
+    --light: #888;
+    --border: #e5e5e5;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: var(--black); background: var(--white); overflow-x: hidden; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5%; height: 72px;
+    background: rgba(10,10,10,0.95); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px; font-weight: 900;
+    color: var(--white); letter-spacing: 1px;
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--gold); }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a {
+    color: rgba(255,255,255,0.75); text-decoration: none;
+    font-size: 13px; font-weight: 500; letter-spacing: 1.5px;
+    text-transform: uppercase; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh; display: flex; align-items: center;
+    background: var(--black);
+    position: relative; overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 30% 50%, rgba(201,168,76,0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.05) 0%, transparent 50%);
+  }
+  .hero-grid {
+    position: absolute; inset: 0; opacity: 0.04;
+    background-image: linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    padding: 0 5%; max-width: 900px; margin-top: 72px;
+  }
+  .hero-tag {
+    display: inline-block;
+    border: 1px solid rgba(201,168,76,0.5);
+    color: var(--gold); font-size: 11px; font-weight: 600;
+    letter-spacing: 3px; text-transform: uppercase;
+    padding: 6px 16px; border-radius: 2px; margin-bottom: 32px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 7vw, 96px); font-weight: 900;
+    color: var(--white); line-height: 1.05;
+    margin-bottom: 28px;
+  }
+  .hero h1 em { color: var(--gold); font-style: normal; }
+  .hero p {
+    font-size: 18px; color: rgba(255,255,255,0.6);
+    line-height: 1.7; max-width: 560px; margin-bottom: 48px;
+    font-weight: 300;
+  }
+  .hero-cta {
+    display: flex; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-primary {
+    background: var(--gold); color: var(--black);
+    padding: 16px 36px; border-radius: 2px;
+    font-size: 13px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; text-decoration: none;
+    transition: all 0.2s;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-outline {
+    border: 1px solid rgba(255,255,255,0.3); color: var(--white);
+    padding: 16px 36px; border-radius: 2px;
+    font-size: 13px; font-weight: 500; letter-spacing: 2px;
+    text-transform: uppercase; text-decoration: none;
+    transition: all 0.2s;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+  /* STATS BAR */
+  .stats-bar {
+    background: var(--gold);
+    padding: 28px 5%;
+    display: flex; justify-content: center; gap: 80px; flex-wrap: wrap;
+  }
+  .stat { text-align: center; }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px; font-weight: 900; color: var(--black); line-height: 1;
+  }
+  .stat-label {
+    font-size: 11px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; color: rgba(10,10,10,0.7); margin-top: 4px;
+  }
+
+  /* SECTION */
+  section { padding: 100px 5%; }
+  .section-tag {
+    font-size: 11px; font-weight: 700; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 16px;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 4vw, 52px); font-weight: 900;
+    line-height: 1.1; margin-bottom: 20px;
+  }
+  .section-sub {
+    font-size: 17px; color: var(--light); line-height: 1.7;
+    max-width: 560px; font-weight: 300;
+  }
+
+  /* ABOUT */
+  .about { background: var(--cream); }
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 80px; align-items: center; max-width: 1200px; margin: 0 auto;
+  }
+  .about-visual {
+    background: var(--black); border-radius: 4px;
+    aspect-ratio: 4/3; display: flex; align-items: center;
+    justify-content: center; position: relative; overflow: hidden;
+  }
+  .about-visual-inner {
+    text-align: center; z-index: 2;
+  }
+  .about-logo-large {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px; font-weight: 900; color: var(--white);
+  }
+  .about-logo-large span { color: var(--gold); }
+  .about-logo-sub {
+    font-size: 11px; letter-spacing: 4px; color: rgba(255,255,255,0.4);
+    text-transform: uppercase; margin-top: 8px;
+  }
+  .about-bg-pattern {
+    position: absolute; inset: 0; opacity: 0.05;
+    background-image: repeating-linear-gradient(45deg, var(--gold) 0, var(--gold) 1px, transparent 0, transparent 50%);
+    background-size: 20px 20px;
+  }
+  .values-list { margin-top: 40px; display: flex; flex-direction: column; gap: 20px; }
+  .value-item { display: flex; gap: 16px; align-items: flex-start; }
+  .value-icon {
+    width: 40px; height: 40px; min-width: 40px;
+    background: var(--gold); border-radius: 2px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+  }
+  .value-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+  .value-desc { font-size: 14px; color: var(--light); line-height: 1.5; }
+
+  /* CATEGORIES */
+  .categories { background: var(--white); }
+  .categories-header { max-width: 1200px; margin: 0 auto 60px; }
+  .cat-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2px; max-width: 1200px; margin: 0 auto;
+  }
+  .cat-card {
+    background: var(--black); padding: 48px 40px;
+    position: relative; overflow: hidden;
+    transition: transform 0.3s;
+    cursor: default;
+  }
+  .cat-card:hover { transform: translateY(-4px); }
+  .cat-card::before {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+    height: 3px; background: var(--gold);
+    transform: scaleX(0); transition: transform 0.3s;
+    transform-origin: left;
+  }
+  .cat-card:hover::before { transform: scaleX(1); }
+  .cat-icon { font-size: 36px; margin-bottom: 20px; }
+  .cat-name {
+    font-size: 20px; font-weight: 700; color: var(--white);
+    margin-bottom: 12px; font-family: 'Playfair Display', serif;
+  }
+  .cat-desc { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.6; }
+  .cat-tag {
+    display: inline-block; margin-top: 20px;
+    font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--gold); border: 1px solid rgba(201,168,76,0.3);
+    padding: 4px 12px; border-radius: 2px;
+  }
+
+  /* PROMISE */
+  .promise { background: var(--black); }
+  .promise-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px; max-width: 1200px; margin: 60px auto 0;
+  }
+  .promise-item { text-align: center; padding: 40px 20px; }
+  .promise-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px; font-weight: 900;
+    color: rgba(201,168,76,0.2); line-height: 1;
+    margin-bottom: 8px;
+  }
+  .promise-title { font-size: 16px; font-weight: 700; color: var(--white); margin-bottom: 12px; }
+  .promise-desc { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.6; }
+
+  /* CONTACT */
+  .contact { background: var(--cream); }
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 80px; max-width: 1200px; margin: 0 auto;
+    align-items: start;
+  }
+  .contact-info { display: flex; flex-direction: column; gap: 32px; margin-top: 40px; }
+  .contact-item { display: flex; gap: 20px; align-items: flex-start; }
+  .contact-icon {
+    width: 44px; height: 44px; min-width: 44px;
+    background: var(--black); border-radius: 2px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold); font-size: 18px;
+  }
+  .contact-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--light); margin-bottom: 4px; }
+  .contact-val { font-size: 15px; font-weight: 600; color: var(--dark); }
+  .contact-form { background: var(--white); padding: 48px; border-radius: 4px; box-shadow: 0 4px 40px rgba(0,0,0,0.08); }
+  .form-group { margin-bottom: 20px; }
+  .form-group label { display: block; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--mid); margin-bottom: 8px; }
+  .form-group input, .form-group textarea, .form-group select {
+    width: 100%; padding: 12px 16px;
+    border: 1px solid var(--border); border-radius: 2px;
+    font-family: 'Inter', sans-serif; font-size: 14px;
+    color: var(--dark); outline: none; transition: border-color 0.2s;
+    background: var(--white);
+  }
+  .form-group input:focus, .form-group textarea:focus { border-color: var(--gold); }
+  .form-group textarea { height: 120px; resize: vertical; }
+  .form-submit {
+    width: 100%; background: var(--black); color: var(--white);
+    border: none; padding: 16px; border-radius: 2px;
+    font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700;
+    letter-spacing: 2px; text-transform: uppercase; cursor: pointer;
+    transition: background 0.2s;
+  }
+  .form-submit:hover { background: var(--gold); color: var(--black); }
+
+  /* FOOTER */
+  footer {
+    background: var(--black); padding: 60px 5% 32px;
+    border-top: 1px solid rgba(201,168,76,0.2);
+  }
+  .footer-top {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    flex-wrap: wrap; gap: 40px; margin-bottom: 48px;
+  }
+  .footer-brand { max-width: 300px; }
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px; font-weight: 900; color: var(--white);
+    margin-bottom: 16px;
+  }
+  .footer-logo span { color: var(--gold); }
+  .footer-desc { font-size: 14px; color: rgba(255,255,255,0.4); line-height: 1.6; }
+  .footer-links h4 {
+    font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 16px;
+  }
+  .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-links a {
+    color: rgba(255,255,255,0.5); text-decoration: none;
+    font-size: 14px; transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--white); }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 28px;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  }
+  .footer-copy { font-size: 13px; color: rgba(255,255,255,0.3); }
+  .footer-legal { display: flex; gap: 24px; }
+  .footer-legal a { font-size: 13px; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.2s; }
+  .footer-legal a:hover { color: var(--gold); }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .about-grid, .contact-grid { grid-template-columns: 1fr; }
+    .stats-bar { gap: 40px; }
+    .about-visual { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">Capra <span>Falcon</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#promise">Our Promise</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="/privacy.html">Privacy</a></li>
+    <li><a href="/support.html">Support</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Premium Private Label</div>
+    <h1>Built for <em>Quality.</em><br>Designed to Last.</h1>
+    <p>Capra Falcon Inc is a US-based Amazon private label company. We create and sell premium quality products across apparel, accessories, food, and lifestyle categories — built with care, priced with integrity.</p>
+    <div class="hero-cta">
+      <a href="#products" class="btn-primary">Our Products</a>
+      <a href="#about" class="btn-outline">About Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat">
+    <div class="stat-num">5+</div>
+    <div class="stat-label">Product Categories</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">US</div>
+    <div class="stat-label">Based and Operated</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">100%</div>
+    <div class="stat-label">Quality Guaranteed</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">Amazon</div>
+    <div class="stat-label">Authorized Seller</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div>
+      <div class="section-tag">Who We Are</div>
+      <h2 class="section-title">A Private Label Brand Built on Integrity</h2>
+      <p class="section-sub">Capra Falcon Inc is an American private label company founded on a simple belief: consumers deserve products that are well-made, honestly priced, and built to last.</p>
+      <div class="values-list">
+        <div class="value-item">
+          <div class="value-icon">◈</div>
+          <div>
+            <div class="value-title">Quality First</div>
+            <div class="value-desc">Every product we sell meets strict quality standards before it reaches our customers. We source carefully and never compromise on materials.</div>
+          </div>
+        </div>
+        <div class="value-item">
+          <div class="value-icon">◈</div>
+          <div>
+            <div class="value-title">Honest Pricing</div>
+            <div class="value-desc">Premium quality should not mean premium markups. We price our products fairly so more people can access genuinely good goods.</div>
+          </div>
+        </div>
+        <div class="value-item">
+          <div class="value-icon">◈</div>
+          <div>
+            <div class="value-title">Customer First</div>
+            <div class="value-desc">We stand behind everything we sell. If a product does not meet your expectations, we will make it right — every time.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-visual">
+      <div class="about-bg-pattern"></div>
+      <div class="about-visual-inner">
+        <div class="about-logo-large">CF<span>.</span></div>
+        <div class="about-logo-sub">Capra Falcon Inc</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="categories" id="products">
+  <div class="categories-header">
+    <div class="section-tag">What We Sell</div>
+    <h2 class="section-title">Our Product Categories</h2>
+    <p class="section-sub">We operate across five core product categories on Amazon, each carefully selected and developed to meet real consumer needs.</p>
+  </div>
+  <div class="cat-grid">
+    <div class="cat-card">
+      <div class="cat-icon">👗</div>
+      <div class="cat-name">Women's Nightwear</div>
+      <div class="cat-desc">Premium pyjama sets crafted from 61% polyester, 35% cotton, 4% spandex single jersey fabric. Available in printed and plain styles in sizes Small to 2XL.</div>
+      <div class="cat-tag">Apparel</div>
+    </div>
+    <div class="cat-card">
+      <div class="cat-icon">👖</div>
+      <div class="cat-name">Men's Lounge Pants</div>
+      <div class="cat-desc">100% cotton lounge pants in lightweight and midweight flannel options. Yarn-dyed plaid patterns in a range of sizes Small to 2XL.</div>
+      <div class="cat-tag">Apparel</div>
+    </div>
+    <div class="cat-card">
+      <div class="cat-icon">🧦</div>
+      <div class="cat-name">Socks</div>
+      <div class="cat-desc">Three-pack cotton blend socks in crew, no-show, and ankle styles. 59% cotton, 38% polyester, 2% spandex. Available in black and white.</div>
+      <div class="cat-tag">Accessories</div>
+    </div>
+    <div class="cat-card">
+      <div class="cat-icon">👛</div>
+      <div class="cat-name">Men's Leather Wallets</div>
+      <div class="cat-desc">Full grain genuine leather wallets with RFID blocking lining. Available in Black, Matte Black, and Tan. Slim, durable, and everyday-ready.</div>
+      <div class="cat-tag">Accessories</div>
+    </div>
+    <div class="cat-card">
+      <div class="cat-icon">🧂</div>
+      <div class="cat-name">Himalayan Pink Salt</div>
+      <div class="cat-desc">Fine grain Himalayan pink salt in 1lb and 2lb options. 100% natural, no additives, no anti-caking agents. Pure mineral salt from the source.</div>
+      <div class="cat-tag">Food</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMISE -->
+<section class="promise" id="promise">
+  <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+    <div class="section-tag" style="color: var(--gold);">Our Commitment</div>
+    <h2 class="section-title" style="color: var(--white);">The Capra Falcon Promise</h2>
+    <p class="section-sub" style="color: rgba(255,255,255,0.5); margin: 0 auto;">Every product we put our name on is backed by these four commitments.</p>
+  </div>
+  <div class="promise-grid">
+    <div class="promise-item">
+      <div class="promise-num">01</div>
+      <div class="promise-title">Verified Materials</div>
+      <div class="promise-desc">Every material and fabric composition is verified and accurately represented. No misleading claims, ever.</div>
+    </div>
+    <div class="promise-item">
+      <div class="promise-num">02</div>
+      <div class="promise-title">True to Description</div>
+      <div class="promise-desc">What you see on our listing is exactly what you receive. Accurate sizing, accurate colors, accurate specifications.</div>
+    </div>
+    <div class="promise-item">
+      <div class="promise-num">03</div>
+      <div class="promise-title">Satisfaction Guaranteed</div>
+      <div class="promise-desc">If any product does not meet your expectations, we will resolve it. No questions, no runarounds.</div>
+    </div>
+    <div class="promise-item">
+      <div class="promise-num">04</div>
+      <div class="promise-title">Responsible Sourcing</div>
+      <div class="promise-desc">We work only with manufacturers who meet our standards for quality, consistency, and responsible production.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-grid">
+    <div>
+      <div class="section-tag">Get In Touch</div>
+      <h2 class="section-title">Contact Capra Falcon</h2>
+      <p class="section-sub">Have a question about our products, a wholesale inquiry, or anything else? We are here to help.</p>
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">✉</div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-val">support@caprafalcon.com</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🌐</div>
+          <div>
+            <div class="contact-label">Website</div>
+            <div class="contact-val">www.caprafalcon.com</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🏢</div>
+          <div>
+            <div class="contact-label">Company</div>
+            <div class="contact-val">Capra Falcon Inc — United States</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <h3 style="font-family: 'Playfair Display', serif; font-size: 24px; margin-bottom: 28px;">Send a Message</h3>
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" placeholder="John Smith">
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="john@example.com">
+      </div>
+      <div class="form-group">
+        <label>Subject</label>
+        <select>
+          <option>Product Inquiry</option>
+          <option>Order Support</option>
+          <option>Wholesale</option>
+          <option>General Question</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea placeholder="How can we help you?"></textarea>
+      </div>
+      <button class="form-submit">Send Message</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">Capra <span>Falcon</span></div>
+      <div class="footer-desc">A US-based Amazon private label company delivering premium quality products across apparel, accessories, and lifestyle categories.</div>
+    </div>
+    <div class="footer-links">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#promise">Our Promise</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="/privacy.html">Privacy Policy</a></li>
+        <li><a href="/support.html">Support</a></li>
+        <li><a href="/terms.html">Terms of Use</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:support@caprafalcon.com">support@caprafalcon.com</a></li>
+        <li><a href="https://www.amazon.com" target="_blank">Shop on Amazon</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 Capra Falcon Inc. All rights reserved.</div>
+    <div class="footer-legal">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Use</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
